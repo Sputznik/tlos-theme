@@ -71,7 +71,8 @@ ul.list-trios li:last-child {
   margin: 15px auto;
 }
 .single-template-3 .author-meta {
-  font-size: 16px;
+  padding:10px;
+  background:#efefef;
 }
 
 .single-template-6 .header_img {
