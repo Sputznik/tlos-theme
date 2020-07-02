@@ -7,6 +7,10 @@ div.grid-uno-feature {
   max-height:300px;
   overflow: hidden;
 }
+div.grid-uno-feature img {
+  height:300px;
+  width:auto;
+}
 div.grid-dos-feature {
   max-height:200px;
   overflow: hidden;
@@ -39,6 +43,6 @@ ul.list-trios li:last-child {
 .single-template-6 .narrow-col {
   max-width: 750px !important;
 }
-.single-template-6 #below-post, .single-template-6 div.decoration, .single-template-6 .related-posts {
+.single-template-6 #below-post, .single-template-6 div.decoration, .single-template-6 div.related-posts {
   display:none;
 }
