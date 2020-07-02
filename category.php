@@ -8,7 +8,7 @@
       </h1>
       <br>
       <?php if (have_posts()) : ?>
-      <ul class='orbit-three-grid grid-uno' style='margin-bottom:50px; padding-left: 0;'>
+      <ul class='orbit-two-grid grid-uno' style='margin-bottom:50px; padding-left: 0;'>
         <?php while (have_posts()) : the_post(); ?>
         <li class="orbit-article-db orbit-list-db" style="border:1px solid #efefef;">
           <div class="grid-uno-feature">

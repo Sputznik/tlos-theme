@@ -8,8 +8,8 @@ div.grid-uno-feature {
   overflow: hidden;
 }
 div.grid-uno-feature img {
-  height:300px;
-  width:auto;
+  height:auto;
+  width:100%;
 }
 div.grid-dos-feature {
   max-height:200px;
