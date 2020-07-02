@@ -35,6 +35,28 @@ ul.list-trios li:last-child {
 }
 
 /* single post */
+.single-template-3 article {
+	margin: 60px auto;
+  max-width: 100%;
+}
+.single-template-3 .entry-header, .single-template-3 .entry-summary, .single-template-3 .entry-content p, .single-template-3 .entry-comments, .single-template-3 .entry-post-nav {
+  width: 750px;
+  margin: 0 auto;
+}
+.single-template-3 .entry-header h1 {
+	font-size: 38px;
+	font-weight: normal;
+}
+.single-template-3 .entry-summary {
+	font-size: 20px;
+	line-height: 1.5;
+  margin-bottom: 30px;
+}
+.single-template-3 .post-thumbnail {
+	margin-bottom: 30px;
+}
+
+
 .single-template-6 .header_img {
   max-height:400px;
   overflow:hidden;

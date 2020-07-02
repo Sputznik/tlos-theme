@@ -9,7 +9,10 @@
         <div class="entry-summary"><?php _e( do_shortcode( '[orbit_excerpt]' ) );?></div>
         <div class="post-thumbnail"><?php _e( do_shortcode( '[orbit_thumbnail size="full"]' ) );?></div>
         <div class="entry-content"><?php the_content(); ?></div>
-        <?php //get_template_part( 'partials/author', 'box');?>
+        <div class="author-meta">
+            <div class="author-name"><?php the_author();?></div>
+            <div class="author-date"><?php the_date('M j, Y');?></div>
+        </div>
         <?php get_template_part( 'partials/comments', 'box');?>
         <?php get_template_part( 'partials/post', 'navigation');?>
       </article>
