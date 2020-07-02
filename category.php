@@ -3,12 +3,12 @@
 <div class="container" style="margin-top: 80px;">
   <div class="row">
     <div class='col-sm-12'>
-      <h1 class="text-center" style="text-transform: capitalize;border-bottom:2px solid black;">
+      <h1 class="text-center" style="text-transform: capitalize;border-bottom:2px solid black;width:25%;margin:0 auto 30px;">
         <?php _e( $term->name );?>
       </h1>
       <br>
       <?php if (have_posts()) : ?>
-      <ul class='orbit-three-grid' style='margin-bottom:50px; padding-left: 0;'>
+      <ul class='orbit-three-grid grid-uno' style='margin-bottom:50px; padding-left: 0;'>
         <?php while (have_posts()) : the_post(); ?>
         <li class="orbit-article-db orbit-list-db">
           <div class="grid-uno-feature">

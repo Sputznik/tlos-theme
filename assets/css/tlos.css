@@ -39,6 +39,6 @@ ul.list-trios li:last-child {
 .single-template-6 .narrow-col {
   max-width: 750px !important;
 }
-.single-template-6 #below-post, .single-template-6 div.decoration {
+.single-template-6 #below-post, .single-template-6 div.decoration, .single-template-6 .related-posts {
   display:none;
 }
