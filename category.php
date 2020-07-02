@@ -1,3 +1,4 @@
+<?php get_header(); ?>
 <?php $term = $wp_query->get_queried_object();?>
 <div class="container" style="margin-top: 80px;">
   <div class="row">
@@ -25,3 +26,4 @@
     </div>
   </div>
 </div>
+<?php get_footer(); ?>

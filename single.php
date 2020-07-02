@@ -1,3 +1,4 @@
+<?php get_header(); ?>
 <div id="content" class="container-fluid single-template-6">
   <?php if(have_posts()): while ( have_posts() ): the_post();?>
   <article class="single-post">
@@ -59,3 +60,4 @@
   </article>
 <?php endwhile;endif;?>
 </div>
+<?php get_footer(); ?>
