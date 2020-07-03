@@ -16,8 +16,8 @@
           </div>
           <div class="grid-uno-text">
             <h1><a href="<?php the_permalink();?>"><?php the_title(); ?></a></h1>
-            <h4><?php the_excerpt();?></h4>
-            <p>Posted on: <?php the_time( 'F jS Y' );?></p>
+            <p><?php the_excerpt();?></p>
+            <p class="small">Posted on: <?php the_time( 'F jS Y' );?></p>
           </div>
         </li>
         <?php endwhile; ?>
