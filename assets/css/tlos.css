@@ -39,10 +39,7 @@ ul.list-trios li:last-child {
 	margin: 60px auto;
   max-width: 100%;
 }
-.entry-content h2,h3,h4,h5,h6 {
-  width: 750px;
-  margin: 15px auto;
-}
+
 .single-template-3 .entry-header h1 {
 	font-size: 38px;
 	font-weight: normal;
