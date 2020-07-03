@@ -10,7 +10,7 @@
         <div class="post-thumbnail"><?php _e( do_shortcode( '[orbit_thumbnail size="full"]' ) );?></div>
         <div class="entry-content"><?php the_content(); ?></div>
         <div class="author-meta">
-            <h4>By <?php the_author();?> | Published on <?php the_date('M j, Y');?> in <?php the_category(", "); ?></h4>
+            <h5>By <?php the_author();?> | Published on <?php the_date('M j, Y');?> in <?php the_category(", "); ?></h5>
         </div>
         <?php get_template_part( 'partials/comments', 'box');?>
         <?php get_template_part( 'partials/post', 'navigation');?>
