@@ -3,7 +3,7 @@
 <div class="container archive-template" style="margin-top: 80px;">
   <div class="row">
     <div class='col-sm-12'>
-      <h1 class="text-center" style="text-transform: capitalize;border-bottom:2px solid black;width:25%;margin:0 auto 30px;">
+      <h1 class="text-center term-title">
         <?php _e( $term->name );?>
       </h1>
       <br>
