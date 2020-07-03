@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <?php $term = $wp_query->get_queried_object();?>
-<div class="container" style="margin-top: 80px;">
+<div class="container archive-template" style="margin-top: 80px;">
   <div class="row">
     <div class='col-sm-12'>
       <h1 class="text-center" style="text-transform: capitalize;border-bottom:2px solid black;width:25%;margin:0 auto 30px;">
