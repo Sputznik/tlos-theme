@@ -25,5 +25,19 @@
       <?php endif; ?>
     </div>
   </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <?php
+        global $wp_query;
+        if( $wp_query->max_num_pages > 1 ){
+          the_posts_pagination( array(
+            'mid_size'  => 2,
+            'prev_text' => __( 'Previous', 'textdomain' ),
+            'next_text' => __( 'Next', 'textdomain' ),
+          ) );
+        }
+      ?>
+    </div>
+  </div>
 </div>
 <?php get_footer(); ?>
