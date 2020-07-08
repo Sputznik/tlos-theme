@@ -1,45 +1,92 @@
-/* custom grids */
-
-ul.grid-uno li {
-  border:1px solid #efefef;
+.page-id-6584 .header4, .page-id-6584 aside {
+  display:none;
 }
-div.grid-uno-feature {
-  height:240px;
+
+h1{font-size:32px;}
+h2{font-size:28px;}
+h3{font-size:24px;}
+h4{font-size:22px; line-height: 29px;}
+h5{font-size:20px; line-height:27px;}
+h6{font-size:18px; line-height: 25px;}
+
+.header4 .navbar-header {
   overflow: hidden;
 }
-div.grid-uno-feature img {
-  height:auto;
-  width:100%;
+.header4 .logo {
+  margin-bottom: 20px;
 }
-div.grid-dos-feature {
-  height:180px;
-  overflow: hidden;
-}
-div.grid-uno-text, div.grid-dos-text {
-  padding:0 10px;
-}
-ul.list-trios li {
-  padding:20px 15px;
-  background-color:#f5f3f4;
-  border-bottom:1px solid #aaa;
-}
-ul.list-trios li:last-child {
-  border-bottom:none;
-}
-.tlos-outline-btn {
-  border:2px solid #7ec35d;
-  border-radius:15px;
-  color:#7ec35d !important;
-  font-weight:bold;
-  margin:15px 0;
+.header4.navbar-default {
+  margin-bottom:0px;
+  background: url("https://thelifeofscience.com/wp-content/uploads/sites/28/2020/07/TLOS_Banner_black.jpg") no-repeat #fff;
 }
 
-/* single post */
-.single-template-3 article {
-	margin: 60px auto;
-  max-width: 100%;
+.dropdown-menu > li > a:focus, .dropdown-menu > li > a:hover, .dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover {
+	background-color: #f6b144;
+}
+.header4 .nav > li:hover {
+  background-color: #f6b144;
 }
 
+#footer-menu h3 {
+  font-size:18px;
+  font-weight:700;
+}
+#footer-menu ul {
+  list-style:none;
+  padding:0
+}
+#footer-menu ul li {
+  margin-bottom:10px;
+}
+
+.alignleft, .alignright {
+  clear:both;
+  margin-bottom: 15px
+}
+.alignleft {
+  float: left;
+  margin-right:15px;
+}
+.alignright {
+  float: right;
+  margin-left:15px;
+}
+.aligncenter {
+  margin:15px auto;
+}
+
+.newsletter .mail-space{
+  	background: #fff;
+    border: solid #000;
+    color: #000;
+    padding: 6px 0px 6px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+}
+.newsletter .button-space{
+  	padding: 9px 20px 9px 20px;
+    background: #000;
+    border: none;
+    margin-left: -3px;
+    color: #fff;
+    font-size: 18px;
+  	font-weight: bold;
+  	border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.entry-content {
+  font-size:18px;
+  line-height:1.7;
+}
+.entry-content img {
+  max-width:100%;
+}
+.entry-content h2, .entry-content h3, .entry-content h4, .entry-content h5, .entry-content h6, .entry-content ul, .entry-content ol {
+  max-width: 750px;
+  margin: 15px auto;
+}
 .single-template-3 .entry-header h1 {
 	font-size: 38px;
 	font-weight: normal;
@@ -53,36 +100,69 @@ ul.list-trios li:last-child {
 	margin-bottom: 30px;
 }
 .single-template-3 .entry-content p {
-  margin:15px auto;
-  font-size: 16px;
-  width: 750px;
+  max-width: 750px;
+}
+.entry-content p a[href], .entry-content ul a[href], .entry-content ol a[href] {
+  border-bottom:1px solid #000;
+}
+.entry-content p a[href]:hover, .entry-content ul a[href]:hover, .entry-content ol a[href]:hover {
+  text-decoration:none;
+}
+.single-template-3 .entry-content p.wp-caption-text {
+  font-size: 15px;
+  font-weight: 700;
+  width:100%;
+  margin:5px 0;
+  color:#555;
 }
 .single-template-3 blockquote {
 	padding: 10px 20px;
-  width:750px;
+  max-width: 750px;
 	margin: 30px auto;
 	font-size: 17.5px;
 	border-left: 5px solid #f6b144;
 }
 .single-template-3 .author-meta {
-  width:750px;
+  max-width: 750px;
 	margin: 30px auto;
   padding:10px;
   background:#efefef;
 }
-.single-template-3 .entry-comments {
-  width:750px;
+.entry-comments, .entry-post-nav {
+  max-width: 750px !important;
 	margin: 30px auto;
 }
+.single-template-3 .entry-content .twitter-tweet {
+  margin: 10px auto !important;
+}
 
-.single-template-6 .header_img {
-  max-height:400px;
-  overflow:hidden;
-  background-position: top;
+@media only screen and (max-width:768px) {
+  .entry-content, .entry-content p, .post .author-meta, .entry-comments, .entry-post-nav, blockquote  {
+  	max-width: 100% !important;
+  }
+  .header4 .navbar-header .visible-xs {
+		max-height: 50px;
+	}
 }
-.single-template-6 .narrow-col {
-  max-width: 750px !important;
+
+.archive-template .term-title {
+  text-transform: capitalize;
+  border-bottom:2px solid black;
+  width:25%;
+  margin:0 auto 30px;
+  padding:20px;
+  font-weight:700;
 }
-.single-template-6 #below-post, .single-template-6 div.decoration, .single-template-6 div.related-posts {
-  display:none;
+
+.nav-links .page-numbers {
+  font-size:16px;
+  padding:6px 12px;
+  background:#f3f3f3;
+  border-radius:20px;
+  border:1px solid #ccc;
+}
+.nav-links .current {
+  background:#f6b144;
+  border:1px solid #555;
+  font-weight:700;
 }
