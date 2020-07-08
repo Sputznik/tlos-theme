@@ -3,6 +3,7 @@ ul.grid-uno li {
 }
 div.grid-uno-feature {
   height:240px;
+  overflow: hidden;
 }
 div.grid-uno-feature img {
   height:auto;
