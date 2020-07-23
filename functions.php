@@ -1,5 +1,5 @@
 <?php
-define ( 'tlos-theme-version', '1.1' );
+define ( 'tlos-theme-version', '1.1.1' );
 
 /*ENQUEUE STYLES*/
 add_action('wp_enqueue_scripts',function(){
