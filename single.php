@@ -7,12 +7,7 @@
       <article <?php post_class();?>>
         <header class="entry-header"><h1 class="entry-title"><?php the_title();?></h1></header>
         <div class="entry-summary"><?php _e( do_shortcode( '[orbit_excerpt]' ) );?></div>
-        <div class='author-meta'>By <?php
-					if ( function_exists('coauthors_posts_links') ) {
-						coauthors_posts_links();
-					}
-					else { the_author(); }
-				?></div>
+
         <?php
 
           if (get_post_meta( get_the_ID(), 'Hide Feature', true) != 'yes') { ?>
@@ -20,15 +15,25 @@
           <?php }
         ?>
 
+        <div class='author-meta'>By <?php
+					if ( function_exists('coauthors_posts_links') ) {
+						coauthors_posts_links();
+					}
+					else { the_author(); }
+				?> | Published on <?php the_date('M j, Y');?> </div>
+
         <div class="entry-content"><?php the_content(); ?></div>
+
         <div class="post-meta">
-            <h5>Published on <?php the_date('M j, Y');?> in <?php the_category(", "); ?></h5>
+            <h5>Posted in <?php the_category(", "); ?></h5>
         </div>
+
         <div class="post-tags">
           <?php if (has_tag()) { ?>
             <h5>Tagged Under: </h5>
           <?php the_tags( '', '', '' ); }?>
         </div>
+
         <div class="author-info">
           <h5>About the author(s)</h5>
           <?php if ( function_exists('coauthors_posts_links') ) {
