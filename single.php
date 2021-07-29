@@ -39,23 +39,35 @@
           <?php if ( function_exists('coauthors_posts_links') ) {
             $coauthors = get_coauthors();
             foreach ( $coauthors as $coauthor ): ?>
-                <div class="auth-bio">
-                  <?php if ($coauthor->type == 'guest-author') { ?>
+              <div class="auth-bio">
+                <?php
+                if ($coauthor->type == 'guest-author') {
+                  $author_link = get_author_posts_url( $coauthor->ID, $coauthor->user_nicename );
+                  ?>
+                  <a href="<?php echo $author_link;?>" class="author-link">
                     <?php echo coauthors_get_avatar($coauthor, 64, '', '', 'profile-pic alignleft'); ?>
-                    <span>
+                  </a>
+                  <span>
+                    <a href="<?php echo $author_link;?>">
                       <h6><?php echo $coauthor->display_name; ?></h6>
-                      <p><?php echo $coauthor->description; ?></p>
-                    </span>
-                  <?php }
-                  else {
-                      echo get_avatar($coauthor->ID, 64, 'default', $coauthor->display_name, array('class' => 'alignleft profile-pic'));
-                      $userdata = get_userdata( $coauthor->ID ); ?>
-                      <span>
+                    </a>
+                    <p><?php echo $coauthor->description; ?></p>
+                  </span>
+                <?php }
+                else {
+                    $author_link = get_author_posts_url( get_the_author_meta( 'ID' ) );
+                    $userdata = get_userdata( $coauthor->ID );?>
+                    <a href="<?php echo $author_link;?>">
+                      <?php echo get_avatar($coauthor->ID, 64, '', $coauthor->display_name, array('class' => 'alignleft profile-pic')); ?>
+                    </a>
+                    <span>
+                      <a href="<?php echo $author_link;?>">
                         <h6><?php echo $userdata->display_name; ?></h6>
-                        <p><?php echo $userdata->description; ?></p>
-                      </span>
-                  <?php } ?>
-                </div>
+                      </a>
+                      <p><?php echo $userdata->description; ?></p>
+                    </span>
+                <?php } ?>
+              </div>
             <?php endforeach;
           } ?>
         </div>
