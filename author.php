@@ -1,29 +1,23 @@
 <?php get_header(); ?>
+<?php $current_author = $wp_query->get_queried_object(); ?>
 <div class="container" style="margin-top: 80px;">
   <div class="row">
     <div class='col-sm-12'>
       <div class="about-author" style="margin-bottom: 40px;">
         <div class="media">
-        <?php if( function_exists('coauthors_posts_links') ) : $coauthors = get_coauthors();
-          foreach( $coauthors as $coauthor ): ?>
-            <?php if( $coauthor->type == 'guest-author' ): ?>
-              <div class="media-left">
-                <?php echo coauthors_get_avatar( $coauthor, 96, '', '', 'profile-pic alignleft'); ?>
-              </div>
-              <div class="media-body">
-                <h2 class="media-heading"><?php echo $coauthor->display_name; ?></h2>
-                <?php echo $coauthor->description; ?>
-              </div>
-            <?php else: ?>
-              <div class="media-left">
-                <?php echo get_avatar( get_the_author_meta( 'ID' ), '100', '', $coauthor->display_name ); ?>
-              </div>
-              <div class="media-body">
-                <h2 class="media-heading"><?php echo $coauthor->display_name;  ?></h2>
-                <?php the_author_meta( 'description' ); ?>
-              </div>
+        <?php if( function_exists('coauthors_posts_links') ) : ?>
+          <div class="media-left">
+            <?php if( $current_author->type == 'guest-author' ): ?>
+              <?php echo coauthors_get_avatar( $current_author, 100, '', '', 'profile-pic alignleft'); ?>
+            <?php else:?>
+              <?php echo get_avatar( get_the_author_meta( 'ID' ), '100', '', $current_author->display_name ); ?>
             <?php endif;?>
-        <?php endforeach; endif; ?>
+          </div>
+          <div class="media-body">
+            <h2 class="media-heading"><?php echo $current_author->display_name; ?></h2>
+            <?php echo $current_author->description; ?>
+          </div>
+        <?php endif; ?>
         </div>
       </div>
       <?php if( have_posts()  ) : ?>
