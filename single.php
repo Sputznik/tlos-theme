@@ -44,7 +44,7 @@
                 if ($coauthor->type == 'guest-author') {
                   $author_link = get_author_posts_url( $coauthor->ID, $coauthor->user_nicename );
                   ?>
-                  <a href="<?php echo $author_link;?>" class="author-link">
+                  <a href="<?php echo $author_link;?>">
                     <?php echo coauthors_get_avatar($coauthor, 64, '', '', 'profile-pic alignleft'); ?>
                   </a>
                   <span>

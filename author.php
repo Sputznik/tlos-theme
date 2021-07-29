@@ -16,10 +16,10 @@
               </div>
             <?php else: ?>
               <div class="media-left">
-                <?php echo get_avatar( get_the_author_meta( 'ID' ), '100' ); ?>
+                <?php echo get_avatar( get_the_author_meta( 'ID' ), '100', '', $coauthor->display_name ); ?>
               </div>
               <div class="media-body">
-                <h2 class="media-heading"><?php the_author_meta( 'display_name' ); ?></h2>
+                <h2 class="media-heading"><?php echo $coauthor->display_name;  ?></h2>
                 <?php the_author_meta( 'description' ); ?>
               </div>
             <?php endif;?>
