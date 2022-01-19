@@ -37,17 +37,17 @@ get_header(); ?>
           <?php }
         ?>
 
-        <!--div class='author-and-date'><span class="author-meta">By <?php /*
+        <div class='author-and-date' style="text-align:center;"><span class="author-meta">By <?php
 					if ( function_exists('coauthors_posts_links') ) {
 						coauthors_posts_links();
 					}
 					else { the_author(); }
-				?></span> | Published on <?php the_date('M j, Y'); */?> </div-->
+				?></span> | Published on <?php the_date('M j, Y'); ?> </div>
 
         <div class="entry-content"><?php the_content(); ?></div>
 
         <div class="post-meta">
-            <h5>Published on <?php the_date('M j, Y'); ?> in <?php the_category(", "); ?></h5>
+            <h5>Posted in <?php the_category(", "); ?></h5>
         </div>
 
         <div class="post-tags">
@@ -56,9 +56,9 @@ get_header(); ?>
           <?php the_tags( '', '', '' ); }?>
         </div>
 
-        <!--div class="author-info">
+        <div class="author-info">
           <h5>About the author(s)</h5>
-          <?php /* if ( function_exists('coauthors_posts_links') ) {
+          <?php if ( function_exists('coauthors_posts_links') ) {
             $coauthors = get_coauthors();
             foreach ( $coauthors as $coauthor ): ?>
               <div class="auth-bio">
@@ -91,8 +91,8 @@ get_header(); ?>
                 <?php } ?>
               </div>
             <?php endforeach;
-          }  */?>
-        </div-->
+          }  ?>
+        </div>
         <?php // get_template_part( 'partials/comments', 'box');?>
         <?php // get_template_part( 'partials/post', 'navigation');?>
       </article>
